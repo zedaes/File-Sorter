@@ -79,8 +79,8 @@ class FileSorter:
         self.executor.shutdown(wait=True)
 
 if __name__ == "__main__":
-    downloadsFolder = os.path.expanduser('~/Downloads')
-    sorter = FileSorter(downloadsFolder)
+    folder = os.path.expanduser('~/Downloads')
+    sorter = FileSorter(folder)
     sorter.sortFiles()
     sorter.close()
     print("Sorting complete.")

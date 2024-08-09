@@ -16,6 +16,53 @@ This script uses only Python’s standard library, so no additional packages are
 
 1. **Clone the Repository**:
    ```
-   git clone https://github.com/zedaes/FileSorter.git
+   git clone https://github.com/zedaes/File-Sorter.git
    cd FileSorter
    ```
+
+2. Edit the Script:
+    Update the `folder` variable in `sorter.py` to point to the directory you want to sort. For example, if you want to sort your Downloads folder:
+
+    ```
+    downloadsFolder = os.path.expanduser('~/Downloads')
+    ```
+
+3. Run the Script:
+    ```
+    python sorter.py
+    ```
+
+4. Check the Results:
+    After running the script, your files and folders will be organized into their respective categories.
+
+## Configuration
+You can customize the file categories and types by modifying the getFileTypes method in sorter.py. The current categories include:
+
+- Documents
+- Images
+- Videos
+- Audio
+- Archives
+- Spreadsheets
+- Presentations
+- Executable
+- Code
+- Folders
+- Others
+
+### Example
+Given the following files in your directory:
+
+- `example.jpg`
+- `document.pdf`
+- `movie.mp4`
+- `script.py`
+- `my_folder`
+
+After running the script, you will find:
+
+- Documents folder containing `document.pdf`
+- Images folder containing `example.jpg`
+- Videos folder containing `movie.mp4`
+- Code folder containing `script.py`
+- Folders folder containing `my_folder`
