@@ -33,10 +33,13 @@ class FileSorter:
                 '.ppt', '.pptx', '.odp'
             ],
             'Executable': [
-                '.exe', '.bin', '.app', '.sh', '.bat'
+                '.exe', '.bin', '.app', '.sh', '.bat', '.cmd', '.msi', '.lnk', '.AppImage'
             ],
             'Code': [
-                '.py', '.java', '.c', '.cpp', '.js', '.html', '.css', '.rb', '.php', '.pl'
+                '.py', '.java', '.c', '.cpp', '.js', '.html', '.css', '.rb', '.php', '.pl', '.md', '.sql', '.json', '.yaml', '.xml', '.ts', '.dart', '.go', '.swift', '.cs', '.vb', '.f#'
+            ],
+            '3D Models': [
+                '.stl', '.step', '.3mf', '.gcode', '.obj', '.stp', '.gltf', '.usd', '.dae'
             ],
             'Folders': [],
             'Others': []
@@ -79,7 +82,7 @@ class FileSorter:
         self.executor.shutdown(wait=True)
 
 if __name__ == "__main__":
-    folder = os.path.expanduser('~/Downloads')
+    folder = os.path.expanduser('~/downloads')
     sorter = FileSorter(folder)
     sorter.sortFiles()
     sorter.close()
